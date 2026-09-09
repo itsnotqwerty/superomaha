@@ -1,3 +1,4 @@
+import Footer from "../islands/Footer.tsx";
 import { define } from "../utils.ts";
 
 export default define.page(function App({ Component }) {
@@ -15,6 +16,7 @@ export default define.page(function App({ Component }) {
       </head>
       <body>
         <Component />
+        <Footer />
       </body>
     </html>
   );
