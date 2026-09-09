@@ -572,3 +572,34 @@ input:focus-visible {
   color: var(--ink);
   border: 1px solid rgba(238, 247, 242, 0.3);
 }
+
+footer {
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+}
+
+.donate-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+a.donate {
+  display: inline-block;
+  background: #f7931a;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+a.donate:hover {
+  background: #e0830f;
+  color: #000;
+}
