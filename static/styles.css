@@ -573,6 +573,7 @@ input:focus-visible {
   border: 1px solid rgba(238, 247, 242, 0.3);
 }
 
+/* --- Footer --- */
 footer {
   padding: 1.25rem 2rem;
   border-top: 1px solid var(--border);
