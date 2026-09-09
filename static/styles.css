@@ -82,6 +82,8 @@ h1 {
   transition: transform 0.12s ease, border-color 0.12s ease, opacity 0.12s ease;
 }
 
+.card, .pair-tab { font-family: "DejaVu Sans", sans-serif; }
+
 .suit-h,
 .suit-d {
   color: #c2273b;
