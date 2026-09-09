@@ -62,16 +62,11 @@ export function cardLabel(card: Card): string {
   return `${rankLabel(card.rank)}${suitSymbol(card.suit)}`;
 }
 
-const SUIT_LETTERS: Record<Suit, string> = {
-  spades: "S",
-  hearts: "H",
-  diamonds: "D",
-  clubs: "C",
-};
-
 /** Letter marker so suit is never signaled by color alone (spec §11.5). */
 export function suitLetter(suit: Suit): string {
-  return SUIT_LETTERS[suit];
+  // Suit names have distinct initials. Deriving the marker keeps it tied to
+  // the card's actual suit and prevents the symbol/letter maps from drifting.
+  return suit[0].toUpperCase();
 }
 
 const SUIT_NAMES: Record<Suit, string> = {
