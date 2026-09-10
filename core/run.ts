@@ -260,7 +260,7 @@ export class Run {
       if (s.ante === 8 && !s.endless) {
         s.phase = "won";
         this.#shop = null;
-        return false;
+        return true;
       }
       s.ante++;
       s.blindIndex = 0;
