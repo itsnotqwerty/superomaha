@@ -49,6 +49,10 @@ function handKey(h: EvaluatedHand): string {
   return `${h.holeIdx.join(".")}-${h.boardIdx.join(".")}`;
 }
 
+function holePairLabel(h: EvaluatedHand): string {
+  return h.cards.slice(0, h.holeIdx.length).map(cardLabel).join(" ");
+}
+
 function CardView(
   { card, committed, marked, dimmed, hidden, onClick }: {
     card: Card;
@@ -698,7 +702,7 @@ export default function OmahaTable() {
                     disabled={locked && !isSelected}
                     onClick={() => setSelectedKey(handKey(h))}
                   >
-                    {h.holeIdx.map((i) => cardLabel(b.hole[i])).join(" ")}
+                    {holePairLabel(h)}
                     <span class="pair-cat">
                       {h.category.replaceAll("_", " ")}
                       {isBest ? " ★" : ""}
